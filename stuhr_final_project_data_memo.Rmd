@@ -1,0 +1,44 @@
+---
+title: "Final Project Data Memo"
+author: "Jaxon Stuhr"
+date: "2022-10-03"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+I'll be using at least two primary datasets for my Final Project, and potentially more. My overall goal is to develop a model that can predict California Locational Marginal Prices (LMPs) based on day-ahead weather forecasts, location, and date. LMPs are essentially localized electricity prices that in recent years have grown very dependant on demand fluctuations as well as amounts of Variable Generation from wind and solar power. CAISO publishes a dataset of LMPs that will contain the output variable, price, as well as some of the input parameters:
+
+* location
+* time of day
+* date
+
+Additionally, VisualCrossing.com publishes historical weather data by zip code in the United States. From this data set I'll be pulling more input parameters:
+
+* high temperature
+* low temperature
+* precipitation
+* wind speed
+* dew point
+* humidity
+
+I'm not sure exactly how many observations I'll be using, but I won't be limited by data. I'd like to use at least a few years worth of data, and start with just a few zip codes to get all the functionality in place and then try to ramp up to all of California. CA has 1741 Zip codes, there are 365 days/yr, 24 hrs/day, and let's say, 3 years. So to start, 1 zip code will be about 26,000 observations, and all zips will be 45 million. 
+
+## Research Question
+
+To what extent can weather data predict electricity prices in CA?
+
+My outcome variable is the localized price of electricity for different Nodes in CA. My question will be answered with a regression approach as the output variable is continuous and numeric. 
+
+The predictors that I think will be especially useful are location, time of day, and high temperature. The goal of my model is predictive. I want to know how well this data can predict prices, not understand exactly how all the variables are tied together. 
+
+## Timeline
+
+I'm meeting with a professor in my department to discuss this project and other datasources next week, hopefully (he has a background in grid modeling and forecasting). My goal is to finalize what parameters I want to consider after that meeting by next Sunday 10/9. Then, I'd like to get all of my data downloaded and pulled into R and formatted nicely the following week or two, so by 10/23. I imagine I'll want to spend 2-3 weeks exploring and plotting the data, and would like to be developing my final predictive model by 11/13.
+
+## Questions
+
+No questions right now but I'd love to discuss my project with you! It also may evolve and change when I meet with the professor in my department who studies similar things. I'm in the Bren school, with most of my research having to do with energy system and technology modeling, but I want to shift into grid modeling as well and figured this could be a good way to start getting familiar with the field. 
